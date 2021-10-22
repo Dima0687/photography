@@ -1,0 +1,108 @@
+.header {
+    height: 40rem; /* 640px */
+    min-height: calc(13rem + 32vw);
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-lg) {
+        height: calc(18rem + 32vw);
+    }
+}
+.header__slope {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 10vw;
+    background-image: linear-gradient(-5.71deg, white 49.9%, transparent 50.1%);
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: 100vw 10vw;
+}
+
+
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    bottom: -7rem;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @media (max-width: $breakpoint-lg) {
+        bottom: -2rem;
+    }
+    @media (max-width: $breakpoint-md) {
+        bottom: 1rem;
+    }
+}
+
+.header::before{
+    top: 0;
+    z-index: -1;
+    background-image: url("../images/pexels-benjamin-suter-3617500.jpg");
+    @media (max-width: $breakpoint-xs) {
+        background-size: cover;
+    }
+}
+.header::after {
+    height: 33vw;
+    background-image: url("../images/pexels-benjamin-suter-3617500-mountains.webp");
+    @media (max-width:$breakpoint-xs) {
+        display: none;
+    }
+}
+
+.header__heading-container {
+    clear: both;
+}
+
+.header__heading-main {
+    font-weight: 700;
+    padding-top: 3rem;
+    font-size: 7rem;
+    line-height: 92%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem rgba(0,0,0,.5);
+    animation: header__heading-main-font-weight 2s 1s ease-in-out both;
+
+    @media (max-width: $breakpoint-md) {
+        font-size: 5rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 3rem;
+    }
+}
+
+@keyframes header__heading-main-font-weight {
+    from {
+        opacity: 0;
+        font-weight: 100;
+    }
+    to {
+        opacity: 1;
+        font-weight: 700;
+    }
+}
+
+.header__heading-main-sub {
+    position: relative;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem rgba(0,0,0,.5);
+    z-index: 2;
+    @media (max-width: $breakpoint-sm) {
+        font-size: 1rem;
+    }
+}
+
