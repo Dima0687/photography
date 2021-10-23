@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .header {
     height: 40rem; /* 640px */
     min-height: calc(13rem + 32vw);
