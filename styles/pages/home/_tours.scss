@@ -1,0 +1,112 @@
+@use "../../abstracts/" as *;
+
+$tours-background-color: $secondary-dark;
+
+@mixin -tours__before-and-after-stroke($color) {
+    @supports (-webkit-text-stroke: .2rem $color) or (text-stroke: .2rem $color) {
+        -webkit-text-stroke: .2rem $color;
+        text-stroke: .2rem $color;
+        text-shadow: none;
+    }
+}
+body, main {
+    position: relative;
+    z-index: -5;
+}
+.tours {
+    background-color: $tours-background-color;
+    padding-bottom: 5rem;
+    position: relative;
+    z-index: -2;
+    &::before,
+    &::after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        content: "Tame the wild";
+        text-transform: uppercase;
+        text-align: center;
+        color: $tours-background-color;
+        font-size: 10rem;
+        font-weight: bold;
+        z-index: -1;
+
+        text-shadow: 0 0 1px white;
+        @include -tours__before-and-after-stroke(rgba(255,255,255,.2));
+    }
+    &::after {
+        @include -tours__before-and-after-stroke(transparent);
+    }
+
+    
+    
+    .tours__container {
+        @include make-container();
+        .tours__heading {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 2rem;
+            letter-spacing: .1em;
+            text-align: center;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .tours__cards {
+            display: flex;
+            .tours__cards-figure {
+                width: 20%;
+                height: 20rem;
+                position: relative;
+                overflow: hidden;
+
+                .tours__card-icon-container {
+                    background-color: $primary;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    .tours__card-icon {
+                        display: block;
+                        width: 4rem;
+                        color: white;
+                    }
+                }
+
+                .tours__cards-figure-img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .tours__card-content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    color: white;
+                    padding: 0 1rem;
+
+                    .tours__card-heading {
+                        font-size: 1.1rem;
+                        margin-bottom: .25rem;
+                    }  
+                    .tours__card-location {
+                        font-size: 1.25rem;
+                        margin-bottom: .33rem;
+                        .tours__card-content-span{
+                            font-size: .9rem;
+                        }
+                    }    
+                    .tours__card-desc {
+                        font-size: .9rem;
+                    } 
+                }
+            }
+        }
+    }
+}
+

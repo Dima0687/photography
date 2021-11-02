@@ -15,25 +15,28 @@
         font-size: 3rem;
     }
 
-    &--logo {
-        margin-top: .9rem;
-
-        &:hover {
-            border-bottom: none;
-            color: rgb(200, 200, 200);
-        }
-    }
+    
 
     &-link {
         display: block;
         color: white;
         text-decoration: none;
-        padding: .5rem .25rem .25rem .25rem;
-        margin: 2rem 2rem 0 2rem;
+        padding: .5rem 0 .25rem .25rem;
+        margin: 2rem 0 0 2rem;
         text-shadow: 0 0 .5rem black;
     
         &:hover {
             border-bottom: 1px solid $primary;
+        }
+
+        &--logo {
+            margin-top: .9rem;
+            padding-left: 0;
+            margin-left: 0;
+            &:hover {
+                border-bottom: none;
+                color: rgb(200, 200, 200);
+            }
         }
     
         .navigation__list-item--menu & {

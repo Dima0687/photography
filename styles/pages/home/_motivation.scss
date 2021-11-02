@@ -1,0 +1,89 @@
+@use "../../abstracts/" as *;
+.motivation {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+.motivation__column-text {
+    float: left;
+    width: 33.33%;
+    padding-right: 4.5rem;
+    padding-top: 4rem;
+
+    @media (max-width: $breakpoint-lg) {
+        padding-right: 3rem;
+    }
+    @media (max-width: $breakpoint-md) {
+        padding-top: 0;
+        padding-right: 0;
+        width: 50%;
+    }
+    @media (max-width: $breakpoint-sm) {
+        float: none;
+        width: 100%;
+        padding-bottom: 3rem;
+    }
+}
+.motivation__text-heading {
+    color: $secondary;
+    font-weight: 500;
+    font-size: 2rem;
+    &::before {
+        content:"";
+        display: block;
+        width: 3rem;
+        height: .25rem;
+        background-color: $secondary-light;
+        margin-bottom: .5rem;
+    }
+}
+.motivation__text {
+    color: $secondary;
+    margin-top: .2rem;
+    font-size: 1.1rem;
+}
+.motivation__column-images {
+    float: left;
+    width: 66.67%;
+    height: clamp(10rem, calc(35vw + 10rem), 36rem);
+    position: relative;
+
+    @media (max-width: $breakpoint-md) {
+        width: 50%;
+        height: clamp(10rem, calc(25vw + 10rem), 36rem);
+    }
+    @media (max-width: $breakpoint-sm) {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+        height: clamp(10rem, calc(40vw + 10rem), 36rem);
+    }
+    @media (max-width: $breakpoint-xs) {
+        width: 90%;
+        height: clamp(10rem, calc(45vw + 10rem), 36rem);
+    }
+}
+
+.motivation__image {
+    position: absolute;
+    width: 50%;
+    box-shadow: 0 0 1rem rgba(0,0,0,.5);
+    box-sizing: content-box;
+    filter: grayscale(50%);
+    transition: filter ease-in-out .25s, transform ease-in-out .25s;
+
+    &--first {
+        width: 75%;
+        @include motivation__image-position(0, 25%);
+        z-index: 1; 
+    }
+    &--second {
+        width: 37%;
+        @include motivation__image-position(10rem, 10%);
+        z-index: 2;
+    }
+    &--third {
+        width: 42%;
+        @include motivation__image-position(5rem, 40%);
+        z-index: 3;
+    }
+}
