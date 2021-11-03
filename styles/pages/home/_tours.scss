@@ -30,9 +30,12 @@ body, main {
         text-transform: uppercase;
         text-align: center;
         color: $tours-background-color;
-        font-size: 10rem;
+        font-size: min(calc(100vw / 9), 10rem);
         font-weight: bold;
         z-index: -1;
+
+        overflow: hidden;
+        white-space: nowrap;
 
         text-shadow: 0 0 1px white;
         @include -tours__before-and-after-stroke(rgba(255,255,255,.2));
@@ -53,15 +56,16 @@ body, main {
             letter-spacing: .1em;
             text-align: center;
             padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-bottom: 1rem;
         }
 
         .tours__cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-
+            
             .tours__cards-figure {
+                margin-top: 3rem;
                 flex: 0 0 (71rem / 5);
                 height: 21rem;
                 position: relative;

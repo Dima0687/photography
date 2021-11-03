@@ -383,9 +383,11 @@ body, main {
   text-transform: uppercase;
   text-align: center;
   color: #011820;
-  font-size: 10rem;
+  font-size: min(11.1111111111vw, 10rem);
   font-weight: bold;
   z-index: -1;
+  overflow: hidden;
+  white-space: nowrap;
   text-shadow: 0 0 1px white;
 }
 @supports (-webkit-text-stroke: 0.2rem rgba(255, 255, 255, 0.2)) or (text-stroke: 0.2rem rgba(255, 255, 255, 0.2)) {
@@ -425,7 +427,7 @@ body, main {
   letter-spacing: 0.1em;
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 .tours .tours__container .tours__cards {
   display: flex;
@@ -433,6 +435,7 @@ body, main {
   justify-content: space-around;
 }
 .tours .tours__container .tours__cards .tours__cards-figure {
+  margin-top: 3rem;
   flex: 0 0 14.2rem;
   height: 21rem;
   position: relative;
