@@ -17,7 +17,7 @@ body, main {
 }
 .tours {
     background-color: $tours-background-color;
-    padding-bottom: 5rem;
+    padding-bottom: 8.5rem;
     position: relative;
     z-index: -2;
     &::before,
@@ -58,8 +58,11 @@ body, main {
 
         .tours__cards {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
             .tours__cards-figure {
-                width: 20%;
+                flex: 0 0 (71rem / 5);
                 height: 21rem;
                 position: relative;
                 overflow: hidden;
@@ -117,6 +120,8 @@ body, main {
                         display: block;
                         width: $tours-icon-size;
                         color: white;
+
+                        filter: drop-shadow(0 0 .5rem rgba(0,0,0,.5));
                     }
                 }
                 
@@ -141,18 +146,24 @@ body, main {
                     text-shadow: 0 0 .125rem black;
                     background-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.25) 20%);
 
-                    transform: translateY(calc(100% - 7.15rem));
+                    transform: translateY(calc(100% - 7rem));
                     transition: transform $tours-animation-duration ease-in-out;
 
                     .tours__card-heading {
                         font-size: 1rem;
                         margin-bottom: .25rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }  
                     .tours__card-location {
                         font-size: 1.25rem;
                         margin-bottom: .6rem;
                         .tours__card-content-span{
                             font-size: .9rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                     }    
                     .tours__card-desc {

@@ -370,7 +370,7 @@ body, main {
 
 .tours {
   background-color: #011820;
-  padding-bottom: 5rem;
+  padding-bottom: 8.5rem;
   position: relative;
   z-index: -2;
 }
@@ -429,9 +429,11 @@ body, main {
 }
 .tours .tours__container .tours__cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .tours .tours__container .tours__cards .tours__cards-figure {
-  width: 20%;
+  flex: 0 0 14.2rem;
   height: 21rem;
   position: relative;
   overflow: hidden;
@@ -479,6 +481,7 @@ body, main {
   display: block;
   width: 3rem;
   color: white;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }
 .tours .tours__container .tours__cards .tours__cards-figure .tours__cards-figure-img {
   width: 100%;
@@ -496,12 +499,15 @@ body, main {
   padding: 3rem 1rem 0 1rem;
   text-shadow: 0 0 0.125rem black;
   background-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.25) 20%);
-  transform: translateY(calc(100% - 7.15rem));
+  transform: translateY(calc(100% - 7rem));
   transition: transform 0.25s ease-in-out;
 }
 .tours .tours__container .tours__cards .tours__cards-figure .tours__card-content .tours__card-heading {
   font-size: 1rem;
   margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tours .tours__container .tours__cards .tours__cards-figure .tours__card-content .tours__card-location {
   font-size: 1.25rem;
@@ -509,6 +515,9 @@ body, main {
 }
 .tours .tours__container .tours__cards .tours__cards-figure .tours__card-content .tours__card-location .tours__card-content-span {
   font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tours .tours__container .tours__cards .tours__cards-figure .tours__card-content .tours__card-desc {
   font-size: 0.8rem;
