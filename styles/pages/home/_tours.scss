@@ -1,6 +1,8 @@
 @use "../../abstracts/" as *;
 
 $tours-background-color: $secondary-dark;
+$tours-icon-size: 3rem;
+$tours-animation-duration: .25s;
 
 @mixin -tours__before-and-after-stroke($color) {
     @supports (-webkit-text-stroke: .2rem $color) or (text-stroke: .2rem $color) {
@@ -58,28 +60,74 @@ body, main {
             display: flex;
             .tours__cards-figure {
                 width: 20%;
-                height: 20rem;
+                height: 21rem;
                 position: relative;
                 overflow: hidden;
+                box-shadow: 0 0 1rem transparent;
+                transition: transform $tours-animation-duration ease-in-out,
+                box-shadow $tours-animation-duration ease-in-out, 
+                z-index $tours-animation-duration linear;
+                z-index: 10;
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 1rem black;
+                    transition: transform $tours-animation-duration ease-in-out,
+                    box-shadow $tours-animation-duration ease-in-out, 
+                    z-index $tours-animation-duration linear;
 
-                .tours__card-icon-container {
+                    z-index: 1000;
+                }
+                &:hover .tours__card-icon-background {
+                    transform: translateX(0);
+                }
+                &:hover .tours__card-icon-container {
+                    transform: translateX(calc(50% - $tours-icon-size / 2)); 
+                }
+                &:hover .tours__card-content {
+                    transform: translateY(0);
+                }
+
+                .tours__card-icon-background {
                     background-color: $primary;
                     position: absolute;
                     top: 0;
                     left: 0;
                     z-index: 1;
+
+                    width: 100%;
+                    height: $tours-icon-size;
+                    transform: translateX(calc(-100% + $tours-icon-size)); 
+                    box-shadow: 0 0 .125rem rgba(0,0,0,.25);
+
+                    transition: transform $tours-animation-duration ease-in-out;
+
+                }
+
+                .tours__card-icon-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    
+                    transform: translateX(0);
+                    transition: transform $tours-animation-duration ease-in-out;
+
                     .tours__card-icon {
                         display: block;
-                        width: 4rem;
+                        width: $tours-icon-size;
                         color: white;
                     }
                 }
+                
 
                 .tours__cards-figure-img {
                     width: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
+
+                    filter: brightness(80%);
                 }
 
                 .tours__card-content {
@@ -88,21 +136,32 @@ body, main {
                     left: 0;
                     right: 0;
                     color: white;
-                    padding: 0 1rem;
+                    padding: 3rem 1rem 0 1rem;
+
+                    text-shadow: 0 0 .125rem black;
+                    background-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.25) 20%);
+
+                    transform: translateY(calc(100% - 7.15rem));
+                    transition: transform $tours-animation-duration ease-in-out;
 
                     .tours__card-heading {
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                         margin-bottom: .25rem;
                     }  
                     .tours__card-location {
                         font-size: 1.25rem;
-                        margin-bottom: .33rem;
+                        margin-bottom: .6rem;
                         .tours__card-content-span{
                             font-size: .9rem;
                         }
                     }    
                     .tours__card-desc {
-                        font-size: .9rem;
+                        font-size: .8rem;
+                        padding: .9rem 0;
+                        background-image: linear-gradient(90deg, $primary 60%, transparent 60%);
+                        background-position-y: top;
+                        background-repeat: no-repeat;
+                        background-size: 100% .1rem;
                     } 
                 }
             }
