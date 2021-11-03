@@ -531,4 +531,50 @@ body, main {
   background-size: 100% 0.1rem;
 }
 
+.story {
+  position: relative;
+  overflow: hidden;
+}
+.story .story__video {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.story .story__video-colorize {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-color: rgba(38, 70, 77, 0.5);
+}
+.story .story__container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+.story .story__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .story .story__container {
+    padding: 0 1rem;
+  }
+}
+.story .story__container .story__heading {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
 /*# sourceMappingURL=main.css.map */
