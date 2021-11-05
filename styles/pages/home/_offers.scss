@@ -1,0 +1,23 @@
+@use "../../abstracts/" as *;
+@use "sass:math";
+
+
+.offers {
+    background-color: rgb(240, 240, 240);
+    min-height: 5rem;
+
+    .offers__container {
+        @include make-container;
+        display: flex;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .offers__card {
+        flex: 1 0 0;
+        margin: 0 .67rem;
+        background-color: white;
+        box-shadow: .5rem .5rem 2rem black;
+        border-bottom: .75rem solid $primary;
+        border-left: math.div(1rem, 16) solid gray;
+    }
+}

@@ -43,6 +43,33 @@ html {
 ************/
 /* @param $top: Position from top (in rem)
  * @param %left: Positon from left (in %) */
+.button {
+  display: inline-block;
+  border: 0.125rem solid currentColor;
+  border-radius: 1000rem;
+  color: #00e29c;
+  text-decoration: none;
+  padding: 1rem 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.button:hover {
+  color: #1cffb9;
+}
+.button--white {
+  color: white;
+}
+.button--white:hover {
+  color: #e6e6e6;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+.button--background-blur {
+  -webkit-backdrop-filter: blur(2.5rem);
+  backdrop-filter: blur(2.5rem);
+}
+
 .container {
   max-width: 75rem;
   margin: 0 auto;
@@ -543,6 +570,13 @@ body, main {
   top: 0;
   width: 100%;
 }
+@supports (object-fit: cover) and (object-position: center center) {
+  .story .story__video {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
 .story .story__video-colorize {
   position: absolute;
   z-index: 1;
@@ -574,7 +608,59 @@ body, main {
   font-size: 2rem;
   letter-spacing: 0.1em;
   padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+}
+.story .story__container .story__desc {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.5);
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 0.125rem solid rgba(255, 255, 255, 0.5);
+  text-align: justify;
+}
+@media (min-width: 48em) {
+  .story .story__container .story__desc {
+    column-count: 1;
+    text-align: left;
+  }
+}
+.story .story__container .story__book {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.offers {
+  background-color: #f0f0f0;
+  min-height: 5rem;
+}
+.offers .offers__container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.offers .offers__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 36em) {
+  .offers .offers__container {
+    padding: 0 1rem;
+  }
+}
+.offers .offers__card {
+  flex: 1 0 0;
+  margin: 0 0.67rem;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem 2rem black;
+  border-bottom: 0.75rem solid #00e29c;
+  border-left: 0.0625rem solid gray;
 }
 
 /*# sourceMappingURL=main.css.map */
