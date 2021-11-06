@@ -28,4 +28,21 @@
         -webkit-backdrop-filter: blur(2.5rem);
         backdrop-filter: blur(2.5rem);
     }
+
+    &--secondary {
+        background-color: $secondary;
+        color: white;
+        border: .125rem solid $secondary;
+
+        &:hover {
+            color: white;
+            background-color: $secondary-dark;
+            border: .125rem solid $secondary-dark;
+        }
+    }
+
+    &--slim {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }

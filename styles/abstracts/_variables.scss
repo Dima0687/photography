@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:math";
 /**************
 * breakpoints *
 ***************/
@@ -18,5 +19,11 @@ $primary: rgb(0, 226, 156)!default;
 $secondary: #26464d!default;
 $secondary-light: color.scale($secondary, $lightness: 20%)!default;
 $secondary-dark: #011820!default;
+
+/***********
+*  maths   *
+************/
+
+$slope-incline: math.asin(.1);
 
 

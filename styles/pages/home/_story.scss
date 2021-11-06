@@ -54,7 +54,7 @@
             column-rule: .125rem solid rgba(255, 255, 255, .5);
             text-align: justify;
 
-            @media(min-width: $breakpoint-sm){
+            @media(max-width: $breakpoint-sm){
                 column-count: 1;
                 text-align: left;
             }
