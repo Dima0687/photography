@@ -11,6 +11,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.25rem;
+    cursor: pointer;
 
     &:hover {
         color: color.scale($primary, $lightness: 20%);
