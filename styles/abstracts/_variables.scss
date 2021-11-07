@@ -4,13 +4,13 @@
 * breakpoints *
 ***************/
 /*  1200px */
-$breakpoint-lg: 75em;
+$breakpoint-lg: 75em!default;
 /* 992px */
-$breakpoint-md: 62em;
+$breakpoint-md: 62em!default;
 /* 768px */
-$breakpoint-sm: 48em;
+$breakpoint-sm: 48em!default;
 /* 576px */
-$breakpoint-xs: 36em;
+$breakpoint-xs: 36em!default;
 
 /***********
 *  colors  *
