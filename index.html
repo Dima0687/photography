@@ -8,6 +8,7 @@
     <link href="./dist/main.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+    <input type="checkbox" class="sidenav__opened" id="sidenav__opened" autocomplete="off">
     <header class="header">
       <div class="container">
         <nav class="navigation">
@@ -19,17 +20,25 @@
                   navigation__list-item-link navigation__list-item-link--logo
                 "
               >
-              <svg class="navigation__list-item-logo" viewBox="0 0 512 512">
-                <g>
-                  <path d="M256.4,512C115.12,512,0.18,397.06,0.18,255.77C0.18,114.49,115.12-0.45,256.4-0.45 s256.23,114.94,256.23,256.22c0,8.85-7.17,16.02-16.02,16.02s-16.02-7.17-16.02-16.02c0-123.62-100.57-224.19-224.19-224.19 S32.21,132.16,32.21,255.77c0,123.62,100.57,224.19,224.19,224.19c8.85,0,16.02,7.17,16.02,16.02S265.25,512,256.4,512z"/>
-  
-                  <path d="M256.4,319.84c-35.32,0-64.06-28.74-64.06-64.06s28.74-64.06,64.06-64.06c35.32,0,64.06,28.73,64.06,64.06 S291.73,319.84,256.4,319.84z M256.4,223.75c-17.66,0-32.02,14.36-32.02,32.02s14.37,32.03,32.02,32.03 c17.66,0,32.03-14.37,32.03-32.03S274.06,223.75,256.4,223.75z"/>
-  
-                  <path d="M256.4,451.48c-107.91,0-195.7-87.8-195.7-195.71s87.79-195.7,195.7-195.7c8.85,0,16.02,7.17,16.02,16.02 S265.25,92.1,256.4,92.1c-90.25,0-163.67,73.42-163.67,163.67c0,90.25,73.42,163.67,163.67,163.67 c46.48,0,90.93-19.88,121.96-54.52c5.9-6.59,16.03-7.15,22.62-1.25c6.59,5.9,7.15,16.03,1.25,22.61 C365.13,427.72,311.98,451.48,256.4,451.48z"/>
-  
-                  <path d="M256.37,383.81c-33.66,0-65.38-12.93-89.49-36.5c-24.45-23.91-38.12-55.91-38.5-90.11 c-0.38-34.2,12.58-66.5,36.5-90.95s55.91-38.12,90.11-38.5c0.48-0.01,0.97-0.01,1.46-0.01c33.66,0,65.38,12.93,89.49,36.5 c6.32,6.18,6.44,16.32,0.25,22.65c-6.19,6.32-16.33,6.44-22.65,0.25c-18.33-17.93-42.6-27.74-68.19-27.36 c-25.64,0.28-49.64,10.53-67.57,28.86s-27.65,42.55-27.36,68.19c0.28,25.64,10.53,49.63,28.87,67.56 c18.33,17.93,42.67,27.63,68.19,27.36c25.64-0.28,49.64-10.53,67.57-28.86c6.18-6.32,16.33-6.44,22.65-0.25 c6.32,6.18,6.44,16.32,0.25,22.65c-23.91,24.45-55.91,38.12-90.11,38.5C257.34,383.81,256.85,383.81,256.37,383.81z"/>
-                </g>
-              </svg>
+                <svg class="navigation__list-item-logo" viewBox="0 0 512 512">
+                  <g>
+                    <path
+                      d="M256.4,512C115.12,512,0.18,397.06,0.18,255.77C0.18,114.49,115.12-0.45,256.4-0.45 s256.23,114.94,256.23,256.22c0,8.85-7.17,16.02-16.02,16.02s-16.02-7.17-16.02-16.02c0-123.62-100.57-224.19-224.19-224.19 S32.21,132.16,32.21,255.77c0,123.62,100.57,224.19,224.19,224.19c8.85,0,16.02,7.17,16.02,16.02S265.25,512,256.4,512z"
+                    />
+
+                    <path
+                      d="M256.4,319.84c-35.32,0-64.06-28.74-64.06-64.06s28.74-64.06,64.06-64.06c35.32,0,64.06,28.73,64.06,64.06 S291.73,319.84,256.4,319.84z M256.4,223.75c-17.66,0-32.02,14.36-32.02,32.02s14.37,32.03,32.02,32.03 c17.66,0,32.03-14.37,32.03-32.03S274.06,223.75,256.4,223.75z"
+                    />
+
+                    <path
+                      d="M256.4,451.48c-107.91,0-195.7-87.8-195.7-195.71s87.79-195.7,195.7-195.7c8.85,0,16.02,7.17,16.02,16.02 S265.25,92.1,256.4,92.1c-90.25,0-163.67,73.42-163.67,163.67c0,90.25,73.42,163.67,163.67,163.67 c46.48,0,90.93-19.88,121.96-54.52c5.9-6.59,16.03-7.15,22.62-1.25c6.59,5.9,7.15,16.03,1.25,22.61 C365.13,427.72,311.98,451.48,256.4,451.48z"
+                    />
+
+                    <path
+                      d="M256.37,383.81c-33.66,0-65.38-12.93-89.49-36.5c-24.45-23.91-38.12-55.91-38.5-90.11 c-0.38-34.2,12.58-66.5,36.5-90.95s55.91-38.12,90.11-38.5c0.48-0.01,0.97-0.01,1.46-0.01c33.66,0,65.38,12.93,89.49,36.5 c6.32,6.18,6.44,16.32,0.25,22.65c-6.19,6.32-16.33,6.44-22.65,0.25c-18.33-17.93-42.6-27.74-68.19-27.36 c-25.64,0.28-49.64,10.53-67.57,28.86s-27.65,42.55-27.36,68.19c0.28,25.64,10.53,49.63,28.87,67.56 c18.33,17.93,42.67,27.63,68.19,27.36c25.64-0.28,49.64-10.53,67.57-28.86c6.18-6.32,16.33-6.44,22.65-0.25 c6.32,6.18,6.44,16.32,0.25,22.65c-23.91,24.45-55.91,38.12-90.11,38.5C257.34,383.81,256.85,383.81,256.37,383.81z"
+                    />
+                  </g>
+                </svg>
               </a>
             </li>
             <li
@@ -55,7 +64,7 @@
               >
             </li>
             <li class="navigation__list-item navigation__list-item--menu">
-              <a href="#" class="navigation__list-item-link">
+              <label class="navigation__list-item-link" for="sidenav__opened">
                 <svg class="icon" viewBox="0 0 512 512">
                   <g>
                     <path
@@ -80,7 +89,7 @@
                     />
                   </g>
                 </svg>
-              </a>
+              </label>
             </li>
           </ul>
         </nav>
@@ -498,20 +507,57 @@
         </div>
       </section>
       <section class="story">
-          <video class="story__video" src="./videos/flug2.webm" type="video/webm" autoplay muted loop>
-          </video>
-          <div class="story__video-colorize"></div>
-          <div class="story__container">
-            <h2 class="story__heading">Unsere Geschichte</h2>
-            <div class="story__desc">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corporis quidem repellendus, ipsa asperiores sapiente ipsum nihil dolor aliquam mollitia reprehenderit quae fugiat, saepe aspernatur accusamus, quia debitis vitae dolore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium sit fugiat ipsum, rerum in sapiente omnis aspernatur nesciunt eaque, magni molestias dignissimos numquam, odio labore voluptatem ipsa obcaecati praesentium ex?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quasi nihil. Aliquam ut est voluptas itaque dolorem libero commodi aut eligendi, quam quos animi nisi, inventore architecto quidem sed consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum placeat in modi inventore aut quam optio eveniet esse repudiandae unde, laudantium exercitationem consequatur quaerat voluptatem quibusdam commodi fugit delectus itaque.</p>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim sapiente explicabo dignissimos. Ducimus voluptatum dolor numquam, officiis vel voluptates. Quaerat eveniet fugit facilis, provident nobis dicta error labore esse dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iure ratione voluptate repudiandae tenetur. Porro quasi veniam mollitia. Commodi ut in sapiente animi enim consequuntur. Ea optio amet voluptates officia?</p>
-            </div>
-            <div class="story__book">
-              <a class="button button--white button--background-blur" href="#booking-modal">Book now</a>
-            </div>
+        <video
+          class="story__video"
+          src="./videos/flug2.webm"
+          type="video/webm"
+          autoplay
+          muted
+          loop
+        ></video>
+        <div class="story__video-colorize"></div>
+        <div class="story__container">
+          <h2 class="story__heading">Unsere Geschichte</h2>
+          <div class="story__desc">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              corporis quidem repellendus, ipsa asperiores sapiente ipsum nihil
+              dolor aliquam mollitia reprehenderit quae fugiat, saepe aspernatur
+              accusamus, quia debitis vitae dolore. Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Laudantium sit fugiat ipsum, rerum
+              in sapiente omnis aspernatur nesciunt eaque, magni molestias
+              dignissimos numquam, odio labore voluptatem ipsa obcaecati
+              praesentium ex?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+              quasi nihil. Aliquam ut est voluptas itaque dolorem libero commodi
+              aut eligendi, quam quos animi nisi, inventore architecto quidem
+              sed consectetur. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptatum placeat in modi inventore aut quam
+              optio eveniet esse repudiandae unde, laudantium exercitationem
+              consequatur quaerat voluptatem quibusdam commodi fugit delectus
+              itaque.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim
+              sapiente explicabo dignissimos. Ducimus voluptatum dolor numquam,
+              officiis vel voluptates. Quaerat eveniet fugit facilis, provident
+              nobis dicta error labore esse dolores? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Deleniti iure ratione voluptate
+              repudiandae tenetur. Porro quasi veniam mollitia. Commodi ut in
+              sapiente animi enim consequuntur. Ea optio amet voluptates
+              officia?
+            </p>
           </div>
+          <div class="story__book">
+            <a
+              class="button button--white button--background-blur"
+              href="#booking-modal"
+              >Book now</a
+            >
+          </div>
+        </div>
       </section>
       <section class="offers">
         <div class="container">
@@ -520,130 +566,272 @@
               <figure class="offers__card">
                 <div class="offers__card-primary">
                   <div class="offers__image-container">
-                    <img class="offers__image" src="./images/offers/pexels-min-an-898766.jpg" alt="">
+                    <img
+                      class="offers__image"
+                      src="./images/offers/pexels-min-an-898766.jpg"
+                      alt=""
+                    />
                   </div>
                   <div class="offers__content">
-                    <h2 class="offers__content-heading">Fotografie-Schnellkurs</h2>
-                    <p class="offers__content-subheading">Lorem ipsum dolor sit amet.</p>
+                    <h2 class="offers__content-heading">
+                      Fotografie-Schnellkurs
+                    </h2>
+                    <p class="offers__content-subheading">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                     <div class="offers__content-info">
                       <div class="offers__content-info-duration">
                         <svg class="icon" viewBox="0 0 415.9 415.9">
                           <g transform="translate(-48.05,-48.05)">
-                              <path d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"/>
-                              <polygon points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"/>
+                            <path
+                              d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"
+                            />
+                            <polygon
+                              points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"
+                            />
                           </g>
                         </svg>
-                        <span class="offers__content-info-duration-text"><strong>3</strong> Stunden</span>
+                        <span class="offers__content-info-duration-text"
+                          ><strong>3</strong> Stunden</span
+                        >
                       </div>
                       <div class="offers__content-info-level">
                         <svg class="icon" viewBox="0 0 205.46 205.46">
-                          <g style="clip-rule:evenodd;fill-rule:evenodd;stroke-miterlimit:10"  transform="translate(-75.414,-75.414)">
-                              <g opacity=".3">
-                                  <path d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor;"/>
-                                  <path d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
-                              </g>
-                              <path d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
+                          <g
+                            style="
+                              clip-rule: evenodd;
+                              fill-rule: evenodd;
+                              stroke-miterlimit: 10;
+                            "
+                            transform="translate(-75.414,-75.414)"
+                          >
+                            <g opacity=".3">
+                              <path
+                                d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                              <path
+                                d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                            </g>
+                            <path
+                              d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4"
+                              style="
+                                fill: none;
+                                stroke-width: 16.67px;
+                                stroke: currentColor;
+                              "
+                            />
                           </g>
-                      </svg>
-                      <span class="offers__content-info-duration-text">Anfänger </span>
+                        </svg>
+                        <span class="offers__content-info-duration-text"
+                          >Anfänger
+                        </span>
                       </div>
                     </div>
                     <div class="offers__content-price-container">
-                    jetzt nur:
+                      jetzt nur:
                       <strong class="offers__content-price">329,99 €</strong>
                     </div>
                   </div>
                 </div>
                 <div class="offers__card-hover">
-                  <a href="#booking-modal" class="button button--secondary button--slim">Jetzt buchen!</a>
+                  <a
+                    href="#booking-modal"
+                    class="button button--secondary button--slim"
+                    >Jetzt buchen!</a
+                  >
                 </div>
               </figure>
             </div>
-  
+
             <div class="offers__card-container offers__card-container--3d">
               <figure class="offers__card">
                 <div class="offers__card-primary">
                   <div class="offers__image-container">
-                    <img class="offers__image" src="./images/offers/pexels-craig-adderley-1724198-cropped.jpg" alt="">
+                    <img
+                      class="offers__image"
+                      src="./images/offers/pexels-craig-adderley-1724198-cropped.jpg"
+                      alt=""
+                    />
                   </div>
                   <div class="offers__content">
                     <h2 class="offers__content-heading">Porträt-Grundkurs</h2>
-                    <p class="offers__content-subheading">Lorem ipsum dolor sit amet.</p>
+                    <p class="offers__content-subheading">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                     <div class="offers__content-info">
                       <div class="offers__content-info-duration">
                         <svg class="icon" viewBox="0 0 415.9 415.9">
                           <g transform="translate(-48.05,-48.05)">
-                              <path d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"/>
-                              <polygon points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"/>
+                            <path
+                              d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"
+                            />
+                            <polygon
+                              points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"
+                            />
                           </g>
                         </svg>
-                        <span class="offers__content-info-duration-text"><strong>5</strong> Stunden</span>
+                        <span class="offers__content-info-duration-text"
+                          ><strong>5</strong> Stunden</span
+                        >
                       </div>
                       <div class="offers__content-info-level">
                         <svg class="icon" viewBox="0 0 205.46 205.46">
-                          <g style="clip-rule:evenodd;fill-rule:evenodd;stroke-miterlimit:10"  transform="translate(-75.414,-75.414)">
-                              <g opacity=".3">
-                                  <path d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor;"/>
-                                  <path d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
-                              </g>
-                              <path d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
+                          <g
+                            style="
+                              clip-rule: evenodd;
+                              fill-rule: evenodd;
+                              stroke-miterlimit: 10;
+                            "
+                            transform="translate(-75.414,-75.414)"
+                          >
+                            <g opacity=".3">
+                              <path
+                                d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                              <path
+                                d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                            </g>
+                            <path
+                              d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4"
+                              style="
+                                fill: none;
+                                stroke-width: 16.67px;
+                                stroke: currentColor;
+                              "
+                            />
                           </g>
-                      </svg>
-                      <span class="offers__content-info-duration-text">Anfänger</span>
+                        </svg>
+                        <span class="offers__content-info-duration-text"
+                          >Anfänger</span
+                        >
                       </div>
                     </div>
                     <div class="offers__content-price-container">
-                     jetzt nur:
+                      jetzt nur:
                       <strong class="offers__content-price">639,99 €</strong>
                     </div>
                   </div>
                 </div>
                 <div class="offers__card-hover">
-                  <a href="#booking-modal" class="button button--secondary button--slim">Jetzt buchen!</a>
+                  <a
+                    href="#booking-modal"
+                    class="button button--secondary button--slim"
+                    >Jetzt buchen!</a
+                  >
                 </div>
               </figure>
             </div>
-  
-            <div class="offers__card-container offers__card-container--3d-hover">
+
+            <div
+              class="offers__card-container offers__card-container--3d-hover"
+            >
               <figure class="offers__card">
                 <div class="offers__card-primary">
                   <div class="offers__image-container">
-                    <img class="offers__image" src="./images/offers/pexels-christian-diokno-5019878.jpg" alt="">
+                    <img
+                      class="offers__image"
+                      src="./images/offers/pexels-christian-diokno-5019878.jpg"
+                      alt=""
+                    />
                   </div>
                   <div class="offers__content">
                     <h2 class="offers__content-heading">Porträt-Profikurs</h2>
-                    <p class="offers__content-subheading">Lorem ipsum dolor sit amet.</p>
+                    <p class="offers__content-subheading">
+                      Lorem ipsum dolor sit amet.
+                    </p>
                     <div class="offers__content-info">
                       <div class="offers__content-info-duration">
                         <svg class="icon" viewBox="0 0 415.9 415.9">
                           <g transform="translate(-48.05,-48.05)">
-                              <path d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"/>
-                              <polygon points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"/>
+                            <path
+                              d="m256 463.95c-114.67 0-207.95-93.29-207.95-207.95s93.28-207.95 207.95-207.95 207.95 93.28 207.95 207.95-93.28 207.95-207.95 207.95zm0-382.16c-96.06 0-174.21 78.15-174.21 174.21s78.15 174.21 174.21 174.21 174.21-78.15 174.21-174.21-78.15-174.21-174.21-174.21z"
+                            />
+                            <polygon
+                              points="272.87 239.13 353.73 239.13 353.73 272.87 239.13 272.87 239.13 126.11 272.87 126.11"
+                            />
                           </g>
                         </svg>
-                        <span class="offers__content-info-duration-text"><strong>7</strong> Stunden</span>
+                        <span class="offers__content-info-duration-text"
+                          ><strong>7</strong> Stunden</span
+                        >
                       </div>
                       <div class="offers__content-info-level">
                         <svg class="icon" viewBox="0 0 205.46 205.46">
-                          <g style="clip-rule:evenodd;fill-rule:evenodd;stroke-miterlimit:10"  transform="translate(-75.414,-75.414)">
-                              <g opacity=".3">
-                                  <path d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor;"/>
-                                  <path d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
-                              </g>
-                              <path d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4" style="fill:none;stroke-width:16.67px;stroke: currentColor"/>
+                          <g
+                            style="
+                              clip-rule: evenodd;
+                              fill-rule: evenodd;
+                              stroke-miterlimit: 10;
+                            "
+                            transform="translate(-75.414,-75.414)"
+                          >
+                            <g opacity=".3">
+                              <path
+                                d="m83.749 178.15c0-52.133 42.258-94.4 94.392-94.4"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                              <path
+                                d="m272.54 178.15c0 52.133-42.266 94.392-94.4 94.392-52.133 0-94.391-42.259-94.391-94.392"
+                                style="
+                                  fill: none;
+                                  stroke-width: 16.67px;
+                                  stroke: currentColor;
+                                "
+                              />
+                            </g>
+                            <path
+                              d="m178.14 83.752c52.134 0 94.4 42.259 94.4 94.4"
+                              style="
+                                fill: none;
+                                stroke-width: 16.67px;
+                                stroke: currentColor;
+                              "
+                            />
                           </g>
-                      </svg>
-                      <span class="offers__content-info-duration-text">Fortgeschritten</span>
+                        </svg>
+                        <span class="offers__content-info-duration-text"
+                          >Fortgeschritten</span
+                        >
                       </div>
                     </div>
                     <div class="offers__content-price-container">
-                    jetzt nur:
+                      jetzt nur:
                       <strong class="offers__content-price">929,99 €</strong>
                     </div>
                   </div>
                 </div>
                 <div class="offers__card-hover">
-                  <a href="#booking-modal" class="button button--secondary button--slim">Jetzt buchen!</a>
+                  <a
+                    href="#booking-modal"
+                    class="button button--secondary button--slim"
+                    >Jetzt buchen!</a
+                  >
                 </div>
               </figure>
             </div>
@@ -656,55 +844,122 @@
 
           <div class="gallery__list">
             <a class="gallery__list-item gallery__list-item--first" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-frans-van-heerden-624015.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-frans-van-heerden-624015.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-jaime-reimer-2662116.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-jaime-reimer-2662116.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-jaime-reimer-2749500.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-jaime-reimer-2749500.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-james-wheeler-417074.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-james-wheeler-417074.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-sasha-prasastika-2695391.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-sasha-prasastika-2695391.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-vishal-amin-910307.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-vishal-amin-910307.jpg"
+                alt=""
+              />
             </a>
             <a class="gallery__list-item" href="#">
-              <img class="gallery__list-item-image" src="./images/gallery/pexels-burst-374870.jpg" alt="">
+              <img
+                class="gallery__list-item-image"
+                src="./images/gallery/pexels-burst-374870.jpg"
+                alt=""
+              />
             </a>
           </div>
 
-          
-          <input type="checkbox" class="gallery__cb-toggle" id="gallery__cb-toggle" autocomplete="off">
+          <input
+            type="checkbox"
+            class="gallery__cb-toggle"
+            id="gallery__cb-toggle"
+            autocomplete="off"
+          />
           <div class="gallery__more-button-container">
             <label class="button" for="gallery__cb-toggle">Mehr</label>
           </div>
 
           <div class="gallery__list gallery__list--cb-toggle">
             <a class="gallery__list-item gallery__list-item--last" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-kei-scampa-4507967.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-kei-scampa-4507967.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-max-ravier-3331094.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-max-ravier-3331094.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-michael-block-3225517.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-michael-block-3225517.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-sam-kolder-2387873.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-sam-kolder-2387873.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-tobias-bjorkli-2113566.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-tobias-bjorkli-2113566.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-trace-hudson-2365457.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-trace-hudson-2365457.jpg');
+                "
+              ></span>
             </a>
             <a class="gallery__list-item" href="#">
-              <span class="gallery__list-item-bg-image" style="background-image:url('./images/gallery2/pexels-trace-hudson-2400594.jpg')"></span>
+              <span
+                class="gallery__list-item-bg-image"
+                style="
+                  background-image: url('./images/gallery2/pexels-trace-hudson-2400594.jpg');
+                "
+              ></span>
             </a>
           </div>
         </div>
@@ -712,48 +967,97 @@
       <section class="about">
         <div class="about__container">
           <div class="about__slideshow">
-            <img class="about__img" src="./images/about/pexels-arun-thomas-2093578.jpg" alt="">
-            <img class="about__img about__img--slideshow about__img--slideshow-1" src="./images/about/pexels-fujifilm-north-america-3497183.jpg" alt="">
-            <img class="about__img about__img--slideshow about__img--slideshow-2" src="./images/about/pexels-kaique-rocha-598917.jpg" alt="">
-            <img class="about__img about__img--slideshow about__img--slideshow-3" src="./images/about/pexels-matt-hardy-2179205.jpg" alt="">
+            <img
+              class="about__img"
+              src="./images/about/pexels-arun-thomas-2093578.jpg"
+              alt=""
+            />
+            <img
+              class="about__img about__img--slideshow about__img--slideshow-1"
+              src="./images/about/pexels-fujifilm-north-america-3497183.jpg"
+              alt=""
+            />
+            <img
+              class="about__img about__img--slideshow about__img--slideshow-2"
+              src="./images/about/pexels-kaique-rocha-598917.jpg"
+              alt=""
+            />
+            <img
+              class="about__img about__img--slideshow about__img--slideshow-3"
+              src="./images/about/pexels-matt-hardy-2179205.jpg"
+              alt=""
+            />
           </div>
 
           <div class="about__text">
             <h2 class="about__heading">Über mich</h2>
-            <p class="about__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio laborum ipsum debitis ullam error quaerat porro eos, qui excepturi quam sunt. Molestias animi ab voluptate deserunt laboriosam architecto velit modi?</p>
-            <p class="about__paragraph">Eos placeat eligendi iste harum sed cupiditate sunt eveniet perferendis quisquam dolorem soluta magnam cum delectus tenetur quasi quo minus, voluptates earum. Officiis quas provident totam ea, facere laboriosam iure?</p>
-            <blockquote class="about__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolore provident quos aliquam ipsam ullam in perspiciatis dolores molestias, commodi eaque fugiat necessitatibus impedit esse debitis recusandae vel assumenda ipsa?</blockquote>
+            <p class="about__paragraph">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+              laborum ipsum debitis ullam error quaerat porro eos, qui excepturi
+              quam sunt. Molestias animi ab voluptate deserunt laboriosam
+              architecto velit modi?
+            </p>
+            <p class="about__paragraph">
+              Eos placeat eligendi iste harum sed cupiditate sunt eveniet
+              perferendis quisquam dolorem soluta magnam cum delectus tenetur
+              quasi quo minus, voluptates earum. Officiis quas provident totam
+              ea, facere laboriosam iure?
+            </p>
+            <blockquote class="about__quote">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+              dolore provident quos aliquam ipsam ullam in perspiciatis dolores
+              molestias, commodi eaque fugiat necessitatibus impedit esse
+              debitis recusandae vel assumenda ipsa?
+            </blockquote>
           </div>
         </div>
       </section>
-
     </main>
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__text-column">
-
           <h2 class="footer__heading">Ready to amp-up your skills?</h2>
-          <p class="footer__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          <p class="footer__paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </p>
 
           <div class="footer__contact-item">
             <div class="footer__contact-item-icon">
               <svg class="icon" viewBox="0 0 391.48 367.73">
-                <path d="m372.68 106.6-154.58-100c-13.6-8.8-31.11-8.8-44.71 0l-154.59 100c-11.72 7.58-18.8 20.6-18.8 34.56v185.41c0 22.73 18.43 41.16 41.16 41.16h309.16c22.73 0 41.16-18.43 41.16-41.16v-185.42c0-13.96-7.08-26.97-18.8-34.55zm-226.79 163.38-88.63 71.18c-2.77 2.22-6.09 3.31-9.38 3.31-4.39 0-8.74-1.92-11.7-5.61-5.19-6.46-4.16-15.9 2.3-21.09l88.63-71.18c6.46-5.19 15.9-4.16 21.09 2.3 5.18 6.46 4.15 15.91-2.31 21.09zm38.11-32.19-122.57-79.29c-18.07-11.69-9.79-39.74 11.73-39.74h245.15c21.53 0 29.81 28.05 11.73 39.74l-122.58 79.29c-7.14 4.62-16.32 4.62-23.46 0zm170.73 101.07c-2.96 3.69-7.31 5.61-11.71 5.61-3.3 0-6.61-1.08-9.38-3.31l-88.63-71.18c-6.46-5.19-7.49-14.63-2.3-21.09s14.63-7.49 21.09-2.3l88.63 71.18c6.46 5.19 7.49 14.63 2.3 21.09z"/>
-                </svg>
+                <path
+                  d="m372.68 106.6-154.58-100c-13.6-8.8-31.11-8.8-44.71 0l-154.59 100c-11.72 7.58-18.8 20.6-18.8 34.56v185.41c0 22.73 18.43 41.16 41.16 41.16h309.16c22.73 0 41.16-18.43 41.16-41.16v-185.42c0-13.96-7.08-26.97-18.8-34.55zm-226.79 163.38-88.63 71.18c-2.77 2.22-6.09 3.31-9.38 3.31-4.39 0-8.74-1.92-11.7-5.61-5.19-6.46-4.16-15.9 2.3-21.09l88.63-71.18c6.46-5.19 15.9-4.16 21.09 2.3 5.18 6.46 4.15 15.91-2.31 21.09zm38.11-32.19-122.57-79.29c-18.07-11.69-9.79-39.74 11.73-39.74h245.15c21.53 0 29.81 28.05 11.73 39.74l-122.58 79.29c-7.14 4.62-16.32 4.62-23.46 0zm170.73 101.07c-2.96 3.69-7.31 5.61-11.71 5.61-3.3 0-6.61-1.08-9.38-3.31l-88.63-71.18c-6.46-5.19-7.49-14.63-2.3-21.09s14.63-7.49 21.09-2.3l88.63 71.18c6.46 5.19 7.49 14.63 2.3 21.09z"
+                />
+              </svg>
             </div>
-              <a class="footer__contact-item-link" href="mailto:contact@example.com" target="_blank">contact@example.com</a>
+            <a
+              class="footer__contact-item-link"
+              href="mailto:contact@example.com"
+              target="_blank"
+              >contact@example.com</a
+            >
           </div>
 
           <div class="footer__contact-item">
-            <div class="footer__contact-item-icon footer__contact-item-icon--phone">
+            <div
+              class="footer__contact-item-icon footer__contact-item-icon--phone"
+            >
               <svg class="icon" viewBox="0 0 349.4 349.67">
                 <g transform="translate(-81.299 -81.164)">
-                  <path d="m412.93 331.8-44.52-24c-10.84-5.84-19.27-1.62-28.6 11.23-20.5 28.2-30.44 33.78-55.6 19.73-23.47-13.1-40.28-28.67-61.36-49.75s-36.64-37.89-49.75-61.36c-14.04-25.15-8.47-35.1 19.73-55.59 12.85-9.34 17.07-17.76 11.23-28.6l-24-44.52c-9.81-18.94-23.71-21.1-44.28-14.14-28.37 9.6-55.82 50.57-54.43 70.01 4.07 56.81 32.51 125.07 91.71 184.26 59.19 59.2 127.45 87.64 184.27 91.71 19.44 1.39 60.14-26.33 69.74-54.7 6.96-20.56 4.79-34.47-14.14-44.28z"/>
-                  <path d="m279.74 160.35c-9.39 0.08-16.93 7.75-16.85 17.13 0.08 9.34 7.67 16.85 16.99 16.85 0.16-0.01 0.32 0 0.46 0 10.11 0 19.58 3.9 26.7 11.02 7.19 7.19 11.1 16.79 11.02 27.01-0.08 9.38 7.47 17.05 16.85 17.13h0.14c9.31 0 16.91-7.52 16.99-16.85 0.16-19.41-7.29-37.63-20.97-51.32-13.69-13.68-32.19-20.85-51.33-20.97zm101.43-29.14c-27.06-27.07-63.52-41.95-101.35-41.75-9.39 0.03-16.96 7.67-16.93 17.05 0.03 9.36 7.63 16.93 16.99 16.93 0.11-0.02 0.3-0.01 0.46 0 29.02 0 56.29 11.28 76.8 31.8 20.6 20.6 31.9 48.02 31.8 77.2-0.03 9.39 7.55 17.02 16.93 17.05h0.06c9.36 0 16.96-7.57 16.99-16.93 0.13-38.31-14.69-74.3-41.75-101.35z"/>
+                  <path
+                    d="m412.93 331.8-44.52-24c-10.84-5.84-19.27-1.62-28.6 11.23-20.5 28.2-30.44 33.78-55.6 19.73-23.47-13.1-40.28-28.67-61.36-49.75s-36.64-37.89-49.75-61.36c-14.04-25.15-8.47-35.1 19.73-55.59 12.85-9.34 17.07-17.76 11.23-28.6l-24-44.52c-9.81-18.94-23.71-21.1-44.28-14.14-28.37 9.6-55.82 50.57-54.43 70.01 4.07 56.81 32.51 125.07 91.71 184.26 59.19 59.2 127.45 87.64 184.27 91.71 19.44 1.39 60.14-26.33 69.74-54.7 6.96-20.56 4.79-34.47-14.14-44.28z"
+                  />
+                  <path
+                    d="m279.74 160.35c-9.39 0.08-16.93 7.75-16.85 17.13 0.08 9.34 7.67 16.85 16.99 16.85 0.16-0.01 0.32 0 0.46 0 10.11 0 19.58 3.9 26.7 11.02 7.19 7.19 11.1 16.79 11.02 27.01-0.08 9.38 7.47 17.05 16.85 17.13h0.14c9.31 0 16.91-7.52 16.99-16.85 0.16-19.41-7.29-37.63-20.97-51.32-13.69-13.68-32.19-20.85-51.33-20.97zm101.43-29.14c-27.06-27.07-63.52-41.95-101.35-41.75-9.39 0.03-16.96 7.67-16.93 17.05 0.03 9.36 7.63 16.93 16.99 16.93 0.11-0.02 0.3-0.01 0.46 0 29.02 0 56.29 11.28 76.8 31.8 20.6 20.6 31.9 48.02 31.8 77.2-0.03 9.39 7.55 17.02 16.93 17.05h0.06c9.36 0 16.96-7.57 16.99-16.93 0.13-38.31-14.69-74.3-41.75-101.35z"
+                  />
                 </g>
               </svg>
             </div>
-              <a class="footer__contact-item-link" href="tel:+491234567890" target="_blank">+49 123 456 7890</a>
+            <a
+              class="footer__contact-item-link"
+              href="tel:+491234567890"
+              target="_blank"
+              >+49 123 456 7890</a
+            >
           </div>
         </div>
 
@@ -762,13 +1066,21 @@
             <div class="footer__logo-icon">
               <svg class="icon icon--no-position" viewBox="0 0 512 512">
                 <g>
-                  <path d="M256.4,512C115.12,512,0.18,397.06,0.18,255.77C0.18,114.49,115.12-0.45,256.4-0.45 s256.23,114.94,256.23,256.22c0,8.85-7.17,16.02-16.02,16.02s-16.02-7.17-16.02-16.02c0-123.62-100.57-224.19-224.19-224.19 S32.21,132.16,32.21,255.77c0,123.62,100.57,224.19,224.19,224.19c8.85,0,16.02,7.17,16.02,16.02S265.25,512,256.4,512z"/>
-  
-                  <path d="M256.4,319.84c-35.32,0-64.06-28.74-64.06-64.06s28.74-64.06,64.06-64.06c35.32,0,64.06,28.73,64.06,64.06 S291.73,319.84,256.4,319.84z M256.4,223.75c-17.66,0-32.02,14.36-32.02,32.02s14.37,32.03,32.02,32.03 c17.66,0,32.03-14.37,32.03-32.03S274.06,223.75,256.4,223.75z"/>
-  
-                  <path d="M256.4,451.48c-107.91,0-195.7-87.8-195.7-195.71s87.79-195.7,195.7-195.7c8.85,0,16.02,7.17,16.02,16.02 S265.25,92.1,256.4,92.1c-90.25,0-163.67,73.42-163.67,163.67c0,90.25,73.42,163.67,163.67,163.67 c46.48,0,90.93-19.88,121.96-54.52c5.9-6.59,16.03-7.15,22.62-1.25c6.59,5.9,7.15,16.03,1.25,22.61 C365.13,427.72,311.98,451.48,256.4,451.48z"/>
-  
-                  <path d="M256.37,383.81c-33.66,0-65.38-12.93-89.49-36.5c-24.45-23.91-38.12-55.91-38.5-90.11 c-0.38-34.2,12.58-66.5,36.5-90.95s55.91-38.12,90.11-38.5c0.48-0.01,0.97-0.01,1.46-0.01c33.66,0,65.38,12.93,89.49,36.5 c6.32,6.18,6.44,16.32,0.25,22.65c-6.19,6.32-16.33,6.44-22.65,0.25c-18.33-17.93-42.6-27.74-68.19-27.36 c-25.64,0.28-49.64,10.53-67.57,28.86s-27.65,42.55-27.36,68.19c0.28,25.64,10.53,49.63,28.87,67.56 c18.33,17.93,42.67,27.63,68.19,27.36c25.64-0.28,49.64-10.53,67.57-28.86c6.18-6.32,16.33-6.44,22.65-0.25 c6.32,6.18,6.44,16.32,0.25,22.65c-23.91,24.45-55.91,38.12-90.11,38.5C257.34,383.81,256.85,383.81,256.37,383.81z"/>
+                  <path
+                    d="M256.4,512C115.12,512,0.18,397.06,0.18,255.77C0.18,114.49,115.12-0.45,256.4-0.45 s256.23,114.94,256.23,256.22c0,8.85-7.17,16.02-16.02,16.02s-16.02-7.17-16.02-16.02c0-123.62-100.57-224.19-224.19-224.19 S32.21,132.16,32.21,255.77c0,123.62,100.57,224.19,224.19,224.19c8.85,0,16.02,7.17,16.02,16.02S265.25,512,256.4,512z"
+                  />
+
+                  <path
+                    d="M256.4,319.84c-35.32,0-64.06-28.74-64.06-64.06s28.74-64.06,64.06-64.06c35.32,0,64.06,28.73,64.06,64.06 S291.73,319.84,256.4,319.84z M256.4,223.75c-17.66,0-32.02,14.36-32.02,32.02s14.37,32.03,32.02,32.03 c17.66,0,32.03-14.37,32.03-32.03S274.06,223.75,256.4,223.75z"
+                  />
+
+                  <path
+                    d="M256.4,451.48c-107.91,0-195.7-87.8-195.7-195.71s87.79-195.7,195.7-195.7c8.85,0,16.02,7.17,16.02,16.02 S265.25,92.1,256.4,92.1c-90.25,0-163.67,73.42-163.67,163.67c0,90.25,73.42,163.67,163.67,163.67 c46.48,0,90.93-19.88,121.96-54.52c5.9-6.59,16.03-7.15,22.62-1.25c6.59,5.9,7.15,16.03,1.25,22.61 C365.13,427.72,311.98,451.48,256.4,451.48z"
+                  />
+
+                  <path
+                    d="M256.37,383.81c-33.66,0-65.38-12.93-89.49-36.5c-24.45-23.91-38.12-55.91-38.5-90.11 c-0.38-34.2,12.58-66.5,36.5-90.95s55.91-38.12,90.11-38.5c0.48-0.01,0.97-0.01,1.46-0.01c33.66,0,65.38,12.93,89.49,36.5 c6.32,6.18,6.44,16.32,0.25,22.65c-6.19,6.32-16.33,6.44-22.65,0.25c-18.33-17.93-42.6-27.74-68.19-27.36 c-25.64,0.28-49.64,10.53-67.57,28.86s-27.65,42.55-27.36,68.19c0.28,25.64,10.53,49.63,28.87,67.56 c18.33,17.93,42.67,27.63,68.19,27.36c25.64-0.28,49.64-10.53,67.57-28.86c6.18-6.32,16.33-6.44,22.65-0.25 c6.32,6.18,6.44,16.32,0.25,22.65c-23.91,24.45-55.91,38.12-90.11,38.5C257.34,383.81,256.85,383.81,256.37,383.81z"
+                  />
                 </g>
               </svg>
             </div>
@@ -779,30 +1091,103 @@
       <div class="footer__footer">
         <ul class="footer__footer-list">
           <li><a class="footer__footer-link" href="#">License</a></li>
-          <li><a class="footer__footer-link" href="#">Privacy &amp; cookies</a></li>
+          <li>
+            <a class="footer__footer-link" href="#">Privacy &amp; cookies</a>
+          </li>
           <li><a class="footer__footer-link" href="#">Terms of use</a></li>
           <li><a class="footer__footer-link" href="#">Trademarks</a></li>
         </ul>
       </div>
     </footer>
 
+    <!-- modal  -->
     <section class="booking-modal" id="booking-modal">
       <div class="booking-modal__content">
         <a class="booking-modal__close" href="#">X</a>
         <h2 class="booking-modal__heading">Jetzt Buchungsanfrage stellen!</h2>
+        <p class="booking-modal__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde minus optio aperiam corrupti nemo eius aliquam molestiae!</p>
 
         <form action="#" class="form">
           <div class="form__horizontal">
             <div class="form__group">
-              <input type="text" class="form__input" id="booking-modal-name" placeholder="Name:">
+              <input
+                type="text"
+                class="form__input"
+                id="booking-modal-name"
+                placeholder="Name:"
+              />
               <label for="booking-modal-name" class="form__label">Name:</label>
             </div>
+
             <div class="form__group">
-              <input type="email" class="form__input" id="booking-modal-email" placeholder="E-Mail:">
-              <label for="booking-modal-email" class="form__label">E-Mail:</label>
+              <input
+                type="email"
+                class="form__input"
+                id="booking-modal-email"
+                placeholder="E-Mail:"
+              />
+              <label for="booking-modal-email" class="form__label"
+                >E-Mail:</label
+              >
             </div>
           </div>
+
+          <div class="form__radio-group">
+            <div class="form__radio-item">
+              <input
+                class="form__radio-item-radio form__radio-item-radio--white"
+                type="radio"
+                name="type"
+                value="private"
+                id="booking-modal-type-private"
+              />
+              <label
+                class="form__radio-item-label"
+                for="booking-modal-type-private"
+                >Privat Kurs buchen</label
+              >
+            </div>
+            <div class="form__radio-item">
+              <input
+                class="form__radio-item-radio form__radio-item-radio--white"
+                type="radio"
+                name="type"
+                value="group"
+                id="booking-modal-type-group"
+              />
+              <label
+                class="form__radio-item-label"
+                for="booking-modal-type-group"
+                >Gruppenkurs buchen</label
+              >
+            </div>
+          </div>
+
+          <div class="booking-modal__submit-container">
+            <input
+              type="submit"
+              class="button button--form"
+              value="Anfrage abschicken!"
+            />
+          </div>
         </form>
+      </div>
+    </section>
+
+    <!-- sidenav -->
+    <section class="sidenav">
+      <label for="sidenav__opened" class="sidenav__background"></label>
+      <div class="sidenav__container">
+        <label for="sidenav__opened" class="sidenav__close">X</label>
+        <nav>
+          <ul class="sidenav__nav">
+            <li><a href="#" class="sidenav__nav-link">Starseite</a></li>
+            <li><a href="#" class="sidenav__nav-link">Kontakt</a></li>
+            <li><a href="#" class="sidenav__nav-link">Über uns</a></li>
+            <li><a href="#" class="sidenav__nav-link">Impressum</a></li>
+            <li><a href="#" class="sidenav__nav-link">Datenschutzerklärung</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 

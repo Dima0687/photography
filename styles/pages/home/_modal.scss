@@ -2,10 +2,23 @@
 @use "sass:color";
 
 $-booking-modal-width: 45rem;
-$-booking-modal-height: 25rem;
+$-booking-modal-height: 23rem;
 
 .booking-modal {
     display: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, .85);
+
+        @supports (backdrop-filter: blur(4rem)){
+            background-color: rgba(0, 0, 0, .15);
+            backdrop-filter: blur(4rem);
+        }
+        animation: booking-modal--fade-in 1s ease-in-out 1;
+    }
     &:target {
         display: flex;
         justify-content: center;
@@ -14,25 +27,32 @@ $-booking-modal-height: 25rem;
         inset: 0;
         z-index: 50000;
 
-        background-color: color.scale($secondary-dark, $alpha: -10%);
         color: white;
-
         .booking-modal__content {
             width: $-booking-modal-width;
             height: $-booking-modal-height;
-            padding-left: $-booking-modal-width * .375;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow: auto;
 
+            padding-left: calc(min(100vw,$-booking-modal-width) * .375);
             $modal-content-bg: color.scale($secondary-light, $alpha: -15%);
 
             background-image: 
             linear-gradient(90deg + $slope-incline, transparent 32.9%, $modal-content-bg 33.15%),
             linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, .5) 100%),
             url("../images/modal/pexels-david-bartus-610293.jpg");
+            background-color: rgb(127, 127, 127);
             background-repeat: no-repeat;
             background-position: center center, 0% 30%;
             background-size: cover;
 
             position: relative;
+
+            box-shadow: 0 0 1rem black;
+            border-radius: .25rem;
+
+            animation: booking-modal__content--fade-in 1s 1s ease-in-out 1 backwards;
 
             .booking-modal__close {
                 position: absolute;
@@ -58,9 +78,43 @@ $-booking-modal-height: 25rem;
                 color: white;
                 font-size: 1.5rem;
                 font-weight: 500;
-                margin-bottom: 1.5rem;
+                margin-bottom: .35rem;
+                text-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+            }
+            
+            .booking-modal__paragraph {
+                font-weight: 250;
+                margin-bottom: 1rem;
+                text-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
             }
 
+            .form {
+                .booking-modal__submit-container {
+                   text-align: right;
+                   margin-right: 1.5rem;
+                   margin-top: 1rem;
+                }
+            }
         }
+    }
+
+
+}
+
+@keyframes booking-modal--fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes booking-modal__content--fade-in {
+    from {
+        transform: translate(0, calc(-50vh - 50%));
+    }
+    to {
+        transform: translate(0, 0);
     }
 }

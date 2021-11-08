@@ -46,4 +46,18 @@
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    &--form {
+        font-size: 1rem;
+        padding: .75rem 1rem;
+        color: black;
+        background-color: $primary;
+        border: .125rem solid $primary;
+        font-weight: normal;
+        text-transform: none;
+        
+        &:hover {
+            color: rgb(50, 50, 50);
+        }
+    }
 }
