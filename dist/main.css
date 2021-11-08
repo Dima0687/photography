@@ -24,6 +24,11 @@ html {
   font-family: "Jost", sans-serif;
 }
 
+input,
+select {
+  font-family: inherit;
+}
+
 .icon {
   fill: currentColor;
   height: 1em;
@@ -89,6 +94,53 @@ html {
 .button--slim {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.form .form__horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form .form__horizontal > .form__group {
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+.form .form__horizontal .form__group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.form .form__horizontal .form__group .form__input {
+  background-color: transparent;
+  border: 0.125rem solid #00e29c;
+  color: #00e29c;
+  font-size: 1rem;
+  width: 12.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10000px;
+  font-family: inherit;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+.form .form__horizontal .form__group .form__input:focus {
+  outline: none;
+}
+.form .form__horizontal .form__group .form__input::placeholder {
+  opacity: 0;
+}
+.form .form__horizontal .form__group .form__input:focus + .form__label, .form .form__horizontal .form__group .form__input:not(:placeholder-shown) + .form__label {
+  transform: scale(0.75) translate(0.4rem, 2.7rem);
+}
+.form .form__horizontal .form__group .form__label {
+  position: absolute;
+  top: 0.125rem;
+  left: 0;
+  font-size: 1rem;
+  margin: 0.75rem 1rem;
+  color: #00e29c;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  transform: scale(1) translate(0, 0);
+  will-change: transform;
+  transform-origin: 0% 50%;
+  transition: transform 0.25s ease-in-out;
 }
 
 .container {
@@ -1313,8 +1365,9 @@ body, main {
   color: white;
 }
 .booking-modal:target .booking-modal__content {
-  width: 40rem;
-  height: 20rem;
+  width: 45rem;
+  height: 25rem;
+  padding-left: 16.875rem;
   background-image: linear-gradient(95.7391704773deg, transparent 32.9%, rgba(64, 118, 130, 0.85) 33.15%), linear-gradient(90deg, transparent 33%, rgba(255, 255, 255, 0.5) 100%), url("../images/modal/pexels-david-bartus-610293.jpg");
   background-repeat: no-repeat;
   background-position: center center, 0% 30%;
@@ -1335,6 +1388,13 @@ body, main {
 }
 .booking-modal:target .booking-modal__content .booking-modal__close:hover {
   opacity: 0.8;
+}
+.booking-modal:target .booking-modal__content .booking-modal__heading {
+  padding-top: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

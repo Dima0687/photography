@@ -1,6 +1,9 @@
 @use "../../abstracts/" as *;
 @use "sass:color";
 
+$-booking-modal-width: 45rem;
+$-booking-modal-height: 25rem;
+
 .booking-modal {
     display: none;
     &:target {
@@ -13,12 +16,11 @@
 
         background-color: color.scale($secondary-dark, $alpha: -10%);
         color: white;
-        .booking-modal__heading {
-        }
 
         .booking-modal__content {
-            width: 40rem;
-            height: 20rem;
+            width: $-booking-modal-width;
+            height: $-booking-modal-height;
+            padding-left: $-booking-modal-width * .375;
 
             $modal-content-bg: color.scale($secondary-light, $alpha: -15%);
 
@@ -50,6 +52,15 @@
                     opacity: .8;
                 }
             }
+
+            .booking-modal__heading {
+                padding-top: 3rem;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+
         }
     }
 }

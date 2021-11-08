@@ -787,9 +787,22 @@
     </footer>
 
     <section class="booking-modal" id="booking-modal">
-      <h2 class="booking-modal__heading">Test</h2>
       <div class="booking-modal__content">
         <a class="booking-modal__close" href="#">X</a>
+        <h2 class="booking-modal__heading">Jetzt Buchungsanfrage stellen!</h2>
+
+        <form action="#" class="form">
+          <div class="form__horizontal">
+            <div class="form__group">
+              <input type="text" class="form__input" id="booking-modal-name" placeholder="Name:">
+              <label for="booking-modal-name" class="form__label">Name:</label>
+            </div>
+            <div class="form__group">
+              <input type="email" class="form__input" id="booking-modal-email" placeholder="E-Mail:">
+              <label for="booking-modal-email" class="form__label">E-Mail:</label>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
 
