@@ -79,6 +79,7 @@ select {
   fill: currentColor;
   height: 1em;
   vertical-align: middle;
+  max-width: 1em;
 }
 .icon:not(.icon--no-position) {
   position: relative;
@@ -914,6 +915,7 @@ body, main {
 .tours .tours__container .tours__cards .tours__cards-figure .tours__card-icon-container .tours__card-icon {
   display: block;
   width: 3rem;
+  height: 3rem;
   color: white;
   filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
 }

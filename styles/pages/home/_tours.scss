@@ -127,6 +127,7 @@ body, main {
                     .tours__card-icon {
                         display: block;
                         width: $tours-icon-size;
+                        height: $tours-icon-size;
                         color: white;
 
                         filter: drop-shadow(0 0 .5rem rgba(0,0,0,.5));
