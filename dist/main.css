@@ -79,7 +79,7 @@ select {
   fill: currentColor;
   height: 1em;
   vertical-align: middle;
-  max-width: 1em;
+  width: 1em;
 }
 .icon:not(.icon--no-position) {
   position: relative;
