@@ -54,6 +54,14 @@ $-booking-modal-height: 23rem;
 
             animation: booking-modal__content--fade-in 1s 1s ease-in-out 1 backwards;
 
+
+            @media (max-width: $breakpoint-xs) {
+                padding-left: 1rem;
+                background-image: none;
+                background-color: color.scale($secondary-light, $alpha: -15%);
+                height: 27rem;
+            }
+
             .booking-modal__close {
                 position: absolute;
                 display: block;

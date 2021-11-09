@@ -25,6 +25,10 @@ html {
     @media(min-width: 342em) {
         font-size: 400%;
     }
+    @media(max-width: $breakpoint-xxs) {
+        font-size: 75%;
+    }
+    
 
 }
 

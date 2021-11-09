@@ -20,6 +20,7 @@
 /* 992px */
 /* 768px */
 /* 576px */
+/* 400px */
 /***********
 *  colors  *
 ************/
@@ -56,6 +57,11 @@ html {
 @media (min-width: 342em) {
   html {
     font-size: 400%;
+  }
+}
+@media (max-width: 25em) {
+  html {
+    font-size: 75%;
   }
 }
 
@@ -856,13 +862,18 @@ body, main {
 }
 .tours .tours__container .tours__cards .tours__cards-figure {
   margin-top: 3rem;
-  flex: 0 0 14.2rem;
+  flex: 0 0 20%;
   height: 21rem;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 1rem transparent;
   transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, z-index 0.25s linear;
   z-index: 10;
+}
+@media (max-width: 75em) {
+  .tours .tours__container .tours__cards .tours__cards-figure {
+    flex: 0 0 14.2rem;
+  }
 }
 .tours .tours__container .tours__cards .tours__cards-figure:hover {
   transform: scale(1.1);
@@ -1553,6 +1564,14 @@ body, main {
   box-shadow: 0 0 1rem black;
   border-radius: 0.25rem;
   animation: booking-modal__content--fade-in 1s 1s ease-in-out 1 backwards;
+}
+@media (max-width: 36em) {
+  .booking-modal:target .booking-modal__content {
+    padding-left: 1rem;
+    background-image: none;
+    background-color: rgba(64, 118, 130, 0.85);
+    height: 27rem;
+  }
 }
 .booking-modal:target .booking-modal__content .booking-modal__close {
   position: absolute;

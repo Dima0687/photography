@@ -67,7 +67,10 @@ body, main {
             
             .tours__cards-figure {
                 margin-top: 3rem;
-                flex: 0 0 math.div(71rem, 5);
+                flex: 0 0 20%;
+                @media (max-width: $breakpoint-lg) {
+                    flex: 0 0 math.div(71rem, 5);
+                }
                 height: 21rem;
                 position: relative;
                 overflow: hidden;
